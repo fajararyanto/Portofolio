@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../image/amy-hirschi-szrJ3wjzOMg-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navigation {
+  width: 100%;
+  padding: 5px;
+}
+
+.navigation .box-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation .box-navigation .box:nth-child(1) h1 a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li a:hover {
+  color: red;
+}
+
+.navigation .box-navigation .box:nth-child(3) {
+  display: none;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li i {
+  display: none;
+}
+
+header .hero {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+header .hero h1 {
+  font-size: 50px;
+  text-align: left;
+}
+
+/* about style */
+.about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #e9ecef;
+}
+
+.about .box-about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .box-about .box:nth-child(1) {
+  padding-right: 50px;
+  margin-top: 30px;
+  padding-right: 10;
+}
+
+.about .box-about .box:nth-child(1) h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about .box-about .box:nth-child(1) p {
+  line-height: 2;
+}
+
+.about .box-about .box:nth-child(2) img {
+  border-radius: 50px;
+  width: 350px;
+}
+
+.portofolio {
+  padding-top: 70px;
+  background-color: #ffca3a;
+}
+
+.blog {
+  padding-top: 70px;
+  background-color: #8ac926;
+}
+
+.contact {
+  padding-top: 100px;
+  background-color: #ff595e;
+}
+
+@media screen and (max-width: 1200px) {
+  .about .box-about .box:nth-child(2) img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navigation .box-navigation .box:nth-child(2) {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: white;
+    width: 250px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navigation .box-navigation .menu-navigation.menu-active {
+    opacity: 1;
+    top: 100px;
+  }
+
+  .navigation .box-navigation .box:nth-child(2) ul {
+    flex-direction: column;
+  }
+
+  .navigation .box-navigation .box:nth-child(2) ul li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .navigation .box-navigation .box:nth-child(2) ul li i {
+    margin-inline: 10px;
+    font-size: 24px;
+    display: inline-block;
+  }
+
+  .navigation .box-navigation .box:nth-child(2) ul li a {
+    color: black;
+  }
+
+  .navigation .box-navigation .box:nth-child(3) {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation .box-navigation .box:nth-child(3) i {
+    font-size: 28px;
+  }
+
+  header .hero h1 {
+    font-size: 34px;
+  }
+
+  .about .box-about {
+    flex-direction: column-reverse;
+  }
+
+  .about .box-about .box:nth-child(1) {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .about .box-about .box:nth-child(2) img {
+    width: 200;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header .hero h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .about .box-about .box:nth-child(1) h1 {
+    font-size: 34px;
+  }
+
+  .about .box-about .box:nth-child(1) p {
+    font-size: 14px;
+  }
+
+  .about .box-about .box:nth-child(2) img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .navigation .box-navigation .box:nth-child(2) {
+    right: 30px;
+  }
+
+  .navigation .box-navigation .menu-navigation.menu-active {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .hero h1 {
+    font-size: 20px;
+  }
+
+  .about .box-about .box:nth-child(1) h1 {
+    font-size: 21px;
+  }
+
+  .about .box-about .box:nth-child(1) p {
+    font-size: 12px;
+  }
+
+  .about .box-about .box:nth-child(2) img {
+    width: 250px;
+    height: 250px;
+  }
+}
